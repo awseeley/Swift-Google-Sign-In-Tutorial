@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleSignIn
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -16,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
+        
         // Override point for customization after application launch.
-        GIDSignIn.sharedInstance().clientID = "922249379731-1fq2gv5jfvhmp0gtdfmg7n50o2ou5jcs.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         return true
     }
@@ -29,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print("Running sign in")
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
@@ -41,6 +46,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let email = user.profile.email
             print(fullName)
         }
+        
+        // Firebase sign in
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                print("Firebase sign in error")
+                print(error)
+                return
+            }
+            print("User is signed in with Firebase")
+        }
+        
+        
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

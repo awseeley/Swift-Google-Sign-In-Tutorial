@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		947A2B4B22508CA7000AA1ED /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 947A2B4A22508CA7000AA1ED /* GoogleService-Info.plist */; };
 		94A4B45C2222A2BD008E8B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4B45B2222A2BD008E8B94 /* AppDelegate.swift */; };
 		94A4B45E2222A2BD008E8B94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A4B45D2222A2BD008E8B94 /* ViewController.swift */; };
 		94A4B4612222A2BD008E8B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A4B45F2222A2BD008E8B94 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		4FA1568D3F00A0A340438CE8 /* Pods-GSignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSignUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSignUITests/Pods-GSignUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		50E581B656CD8EB7D465F917 /* Pods-GSign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSign.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSign/Pods-GSign.release.xcconfig"; sourceTree = "<group>"; };
 		6EF4DD8332BD2CB3C096E623 /* Pods-GSignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSignTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSignTests/Pods-GSignTests.debug.xcconfig"; sourceTree = "<group>"; };
+		947A2B4A22508CA7000AA1ED /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A4B4582222A2BD008E8B94 /* GSign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A4B45B2222A2BD008E8B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94A4B45D2222A2BD008E8B94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				94A4B4622222A2C0008E8B94 /* Assets.xcassets */,
 				94A4B4642222A2C0008E8B94 /* LaunchScreen.storyboard */,
 				94A4B4672222A2C0008E8B94 /* Info.plist */,
+				947A2B4A22508CA7000AA1ED /* GoogleService-Info.plist */,
 			);
 			path = GSign;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A4B4662222A2C0008E8B94 /* LaunchScreen.storyboard in Resources */,
+				947A2B4B22508CA7000AA1ED /* GoogleService-Info.plist in Resources */,
 				94A4B4632222A2C0008E8B94 /* Assets.xcassets in Resources */,
 				94A4B4612222A2BD008E8B94 /* Main.storyboard in Resources */,
 			);
@@ -391,11 +395,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GSign/Pods-GSign-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

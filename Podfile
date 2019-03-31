@@ -7,6 +7,7 @@ target 'GSign' do
 
   # Pods for GSign
   pod 'GoogleSignIn'
+  pod 'Firebase/Auth'
 
   target 'GSignTests' do
     inherit! :search_paths

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5CF564C818F0DA6386F217C48C3DC017"
+               BlueprintIdentifier = "A58820D89173DA94867453E0E6C12F3A"
                BuildableName = "Pods_GSign.framework"
                BlueprintName = "Pods-GSign"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5CF564C818F0DA6386F217C48C3DC017"
+            BlueprintIdentifier = "A58820D89173DA94867453E0E6C12F3A"
             BuildableName = "Pods_GSign.framework"
             BlueprintName = "Pods-GSign"
             ReferencedContainer = "container:Pods.xcodeproj">
